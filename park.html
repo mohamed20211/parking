@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="park.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body class="LL">
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-12 offset-5 mb-5"  id="aa" > 
+           parking system 
+          </div>
+        </div>
+        <div class="container">
+            <div class="row">
+              <button class="col-lg-2 col-md-12 col-sm-12 col-12 btn-info " onclick="foo()" id="ab">moto parking Area</button> 
+              <button class="col-lg-2 col-md-12 col-sm-12 col-12 btn-info " onclick="bar()" id="ac">car parking Area</button> 
+              <button class="col-lg-2 col-md-12 col-sm-12 col-12 btn-info " onclick="baz()" id="ad">Truck parking Area</button> 
+              <input  class="col-lg-2 col-md-12 col-sm-12 col-12" type="name" id="ae"/>
+              <button class="col-lg-2 col-md-12 col-sm-12 col-12 btn-info" id="searchBtn">search for a client</button> 
+              </div>
+            </div>
+            <div class="mct" id="div">Motorcycles parking Area</div>
+            <div class="contain">
+              <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-9 col-12">
+                  <img  class="myimg" id="myImg" src="moto.jpg"/>
+                </div>
+                <div id="checkDiv" class="col-lg-4 col-md-6 col-sm-9 col-12 offset-2">
+                  <button class="btn-info" onclick="checkFunc(ckeckP)" id="checkBtn">check in Cars or Truck Area</button>
+                  <p id="ckeckP">Result</p>
+                </div>
+                <canvas class="col-lg-2 col-md-9 col-9 offset-1 mt-3"  id="canvas" width="300" height="300"
+                style="background-color: aqua ; border-radius: 30px;" >
+                </canvas>
+              </div>
+          
+              
+            </div>
+            
+            <p class="pnum col-lg-6 col-md-6" id="c"> Number of Free MotoCycle Slots <span id="sNum">10</span></p>
+            <p class="pnum col-lg-6 col-md-6" id="d"> Number of Free Cars Slots <span id="sNumm">10</span></p>
+            <p class="pnum col-lg-6 col-md-6" id="f"> Number of Free Trucks Slots <span id="sNummm">10</span></p>
+
+
+            <!--first card-->
+            <div class="myCont" id="motoContainer" >
+            <div class="row"> 
+              <div class="col-lg-4 col-md-6 col-sm-9 col-12 ">
+                <div id="mycard" class="card" style="width: 18rem;">
+                <div class="card-body">
+                <h5 class="card-title">First</h5>
+                <div>
+                  <div>
+                      <div class="input-group">
+                        <button class="btn-info" onclick="leaveFunc(sNum,mydate1)" id="leav">leave</button>
+                          <input id="myFirstInput" type="text" class="form-control" />
+                          <button id="myFirstBtn" onclick="myCardFunction(sNum,mydate1)" class="input-group-addon btn-brown">save</button> 
+                      </div>
+                      <hr style="width: 100%;text-align:left;margin-left:0">
+                      <p id="myP1">free place</p>
+                      <p id="myP2">client : </p>
+                      <p id="mydate1">start date :</p>
+
+                  </div>
+              </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!--second-->
+          <div class="col-lg-4 col-md-6 col-sm-9 col-12">
+            <div id="mycard" class="card" style="width: 18rem;">
+            <div class="card-body">
+            <h5 class="card-title">Second</h5>
+            <div>
+              <div>
+                  <div class="input-group">
+                      <button class="btn-info" onclick="leaveFunc1(sNum,mydate2)" id="leav1">leave</button>
+                      <input id="mySecondInput" type="text" class="form-control" />
+                      <button id="mySecondBtn" onclick="myCardFunction1(sNum,mydate2)" class="input-group-addon btn-brown">save</button> 
+                  </div>
+                  <hr style="width: 100%;text-align:left;margin-left:0">
+                  <p id="m1">free place</p>
+                  <p id="m2">client : </p>
+                  <p id="mydate2">start date :</p>
+
+              </div>
+          </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!--third-->
+      <div class="col-lg-4 col-md-6 col-sm-9 col-12">
+        <div id="mycard" class="card" style="width: 18rem;">
+        <div class="card-body">
+        <h5 class="card-title">Third</h5>
+        <div>
+          <div>
+              <div class="input-group">
+                  <button class="btn-info" onclick="leaveFunc2(sNum,mydate3)" id="leav2">leave</button>
+                  <input id="myThirdInput" type="text" class="form-control" />
+                  <button id="myThirdtBtn" onclick="myCardFunction2(sNum,mydate3)" class="input-group-addon btn-brown">save</button> 
+              </div>
+              <hr style="width: 100%;text-align:left;margin-left:0">
+              <p id="p1">free place</p>
+              <p id="p2">client : </p>
+              <p id="mydate3">start date :</p>
+
+          </div>
+      </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!--fourth-->
+  <div class="col-lg-4 col-md-6 col-sm-9 col-12" >
+    <div id="mycard" class="card" style="width: 18rem;">
+    <div class="card-body">
+    <h5 class="card-title">Fourth</h5>
+    <div>
+      <div>
+          <div class="input-group">
+              <button class="btn-info" onclick="leaveFunc3(sNum,mydate4)" id="leav3">leave</button>
+              <input id="myFourthInput" type="text" class="form-control" />
+              <button id="myFourthtBtn" onclick="myCardFunction3(sNum,mydate4)" class="input-group-addon btn-brown">save</button> 
+          </div>
+          <hr style="width: 100%;text-align:left;margin-left:0">
+          <p id="q1">free place</p>
+          <p id="q2">client : </p>
+          <p id="mydate4">start date :</p>
+
+      </div>
+  </div>
+  </div>
+</div>
+
+</div>
+
+<!--FIFTH-->
+<div class="col-lg-4 col-md-6 col-sm-9 col-12" >
+  <div id="mycard" class="card" style="width: 18rem;">
+  <div class="card-body">
+  <h5 class="card-title">Fifth</h5>
+  <div>
+    <div>
+        <div class="input-group">
+            <button class="btn-info" onclick="leaveFunc4(sNum,mydate5)" id="leav4">leave</button>
+            <input id="myFifthInput" type="text" class="form-control" />
+            <button id="myFifthBtn" onclick="myCardFunction4(sNum,mydate5)" class="input-group-addon btn-brown">save</button> 
+        </div>
+        <hr style="width: 100%;text-align:left;margin-left:0">
+        <p id="r1">free place</p>
+        <p id="r2">client : </p>
+        
+        <p id="mydate5">start date :</p>
+
+    </div>
+</div>
+</div>
+</div>
+
+</div>
+
+<!--SIXTH-->
+<div class="col-lg-4 col-md-6 col-sm-9 col-12" >
+  <div id="mycard" class="card" style="width: 18rem;">
+  <div class="card-body">
+  <h5 class="card-title">Sixth</h5>
+  <div>
+    <div>
+        <div class="input-group">
+            <button class="btn-info" onclick="leaveFunc5(sNum,mydate6)" id="leav5">leave</button>
+            <input id="mySixthInput" type="text" class="form-control" />
+            <button id="mySixthBtn" onclick="myCardFunction5(sNum,mydate6)" class="input-group-addon btn-brown">save</button> 
+        </div>
+        <hr style="width: 100%;text-align:left;margin-left:0">
+        <p id="s1">free place</p>
+        <p id="s2">client : </p>
+        
+        <p id="mydate6">start date :</p>
+
+    </div>
+</div>
+</div>
+</div>
+
+</div>
+
+<!--seventh-->
+<div class="col-lg-4 col-md-6 col-sm-9 col-12" >
+  <div id="mycard" class="card" style="width: 18rem;">
+  <div class="card-body">
+  <h5 class="card-title">seventh</h5>
+  <div>
+    <div>
+        <div class="input-group">
+            <button class="btn-info" onclick="leaveFunc6(sNum,mydate7)" id="leav6">leave</button>
+            <input id="mySeventhInput" type="text" class="form-control" />
+            <button id="mySeventhBtn" onclick="myCardFunction6(sNum,mydate7)" class="input-group-addon btn-brown">save</button> 
+        </div>
+        <hr style="width: 100%;text-align:left;margin-left:0">
+        <p id="t1">free place</p>
+        <p id="t2">client : </p>
+        
+        <p id="mydate7">start date :</p>
+
+    </div>
+</div>
+</div>
+</div>
+
+</div>
+
+<!--eighth-->
+
+<div class="col-lg-4 col-md-6 col-sm-9 col-12" >
+  <div id="mycard" class="card" style="width: 18rem;">
+  <div class="card-body">
+  <h5 class="card-title">Eighth</h5>
+  <div>
+    <div>
+        <div class="input-group">
+            <button class="btn-info" onclick="leaveFunc7(sNum,mydate8)" id="leav7">leave</button>
+            <input id="myEighthInput" type="text" class="form-control" />
+            <button id="myEighthBtn" onclick="myCardFunction7(sNum,mydate8)" class="input-group-addon btn-brown">save</button> 
+        </div>
+        <hr style="width: 100%;text-align:left;margin-left:0">
+        <p id="u1">free place</p>
+        <p id="u2">client : </p>
+        
+        <p id="mydate8">start date :</p>
+
+    </div>
+</div>
+</div>
+</div>
+
+</div>
+
+<!--nineth-->
+<div class="col-lg-4 col-md-6 col-sm-9 col-12" >
+  <div id="mycard" class="card" style="width: 18rem;">
+  <div class="card-body">
+  <h5 class="card-title">Ninth</h5>
+  <div>
+    <div>
+        <div class="input-group">
+            <button class="btn-info" onclick="leaveFunc8(sNum,mydate9)" id="leav8">leave</button>
+            <input id="myNinethInput" type="text" class="form-control" />
+            <button id="myNinethBtn" onclick="myCardFunction8(sNum,mydate9)" class="input-group-addon btn-brown">save</button> 
+        </div>
+        <hr style="width: 100%;text-align:left;margin-left:0">
+        <p id="v1">free place</p>
+        <p id="v2">client : </p>
+        
+        <p id="mydate9">start date :</p>
+
+    </div>
+</div>
+</div>
+</div>
+
+</div>
+
+<!--tenth-->
+<div class="col-lg-4 col-md-6 col-sm-9 col-12" >
+  <div id="mycard" class="card" style="width: 18rem;">
+  <div class="card-body">
+  <h5 class="card-title">tenth</h5>
+  <div>
+    <div>
+        <div class="input-group">
+            <button class="btn-info" onclick="leaveFunc9(sNum,mydate10)" id="leav9">leave</button>
+            <input id="myTenthInput" type="text" class="form-control" />
+            <button id="myTenthBtn" onclick="myCardFunction9(sNum,mydate10)" class="input-group-addon btn-brown">save</button> 
+        </div>
+        <hr style="width: 100%;text-align:left;margin-left:0">
+        <p id="w1">free place</p>
+        <p id="w2">client : </p>
+        
+        <p id="mydate10">start date :</p>
+
+    </div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+        </div> 
+      </div>
+
+
+
+
+<!--########################### caaaaars########################### -->
+
+<!--first in cars-->
+<div class="carContainer " id="carContainer" ;">
+  <div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-9 col-12" id="cardd1">
+      <div id="car" class="card" style="width: 18rem;">
+      <div class="card-body">
+      <h5 class="card-title">First</h5>
+      <div>
+        <div>
+            <div class="input-group">
+                <button class="btn-info" onclick="carLeave1(sNumm,mydate11)" id="carLeaves1">leave</button>
+                <input id="carInput1" type="text" class="form-control" />
+                <button id="carBtnSave1" onclick="carFunc1(sNumm,mydate11)" class="input-group-addon btn-brown">save</button> 
+            </div>
+            <hr style="width: 100%;text-align:left;margin-left:0">
+            <p id="bb1">free place</p>
+            <p id="bb2">client : </p>
+            
+            <p id="mydate11">start date :</p>
+    
+        </div>
+    </div>
+    </div>
+    </div>
+    
+    </div>
+<!--second-->
+<div class="col-lg-4 col-md-6 col-sm-9 col-12" id="cardd2">
+  <div id="car" class="card" style="width: 18rem;">
+  <div class="card-body">
+  <h5 class="card-title">Second</h5>
+  <div>
+    <div>
+        <div class="input-group">
+            <button class="btn-info" onclick="carLeave2(sNumm,mydate12)" id="carLeaves2">leave</button>
+            <input id="carInput2" type="text" class="form-control" />
+            <button id="carBtnSave2" onclick="carFunc2(sNumm,mydate12)" class="input-group-addon btn-brown">save</button> 
+        </div>
+        <hr style="width: 100%;text-align:left;margin-left:0">
+        <p id="bb4">free place</p>
+        <p id="bb5">client : </p>
+        
+        <p id="mydate12">start date :</p>
+
+    </div>
+</div>
+</div>
+</div>
+
+</div>
+
+<!--third-->
+<div class="col-lg-4 col-md-6 col-sm-9 col-12" id="cardd3">
+  <div id="car" class="card" style="width: 18rem;">
+  <div class="card-body">
+  <h5 class="card-title">Third</h5>
+  <div>
+    <div>
+        <div class="input-group">
+            <button class="btn-info" onclick="carLeave3(sNumm,mydate13)" id="carLeaves3">leave</button>
+            <input id="carInput3" type="text" class="form-control" />
+            <button id="carBtnSave3" onclick="carFunc3(sNumm,mydate13)" class="input-group-addon btn-brown">save</button> 
+        </div>
+        <hr style="width: 100%;text-align:left;margin-left:0">
+        <p id="bb7">free place</p>
+        <p id="bb8">client : </p>
+        
+        <p id="mydate13">start date :</p>
+
+    </div>
+</div>
+</div>
+</div>
+
+</div>
+
+<!--fourth-->
+<div class="col-lg-4 col-md-6 col-sm-9 col-12" id="cardd4">
+  <div id="car" class="card" style="width: 18rem;">
+  <div class="card-body">
+  <h5 class="card-title">Fourth</h5>
+  <div>
+    <div>
+        <div class="input-group">
+            <button class="btn-info" onclick="carLeave4(sNumm,mydate14)" id="carLeaves4">leave</button>
+            <input id="carInput4" type="text" class="form-control" />
+            <button id="carBtnSave4" onclick="carFunc4(sNumm,mydate14)" class="input-group-addon btn-brown">save</button> 
+        </div>
+        <hr style="width: 100%;text-align:left;margin-left:0">
+        <p id="bb10">free place</p>
+        <p id="bb11">client : </p>
+        <p id="mydate14">start date :</p>
+
+    </div>
+</div>
+</div>
+</div>
+
+</div>
+
+<!--fifth-->
+<div class="col-lg-4 col-md-6 col-sm-9 col-12" id="cardd5">
+  <div id="car" class="card" style="width: 18rem;">
+  <div class="card-body">
+  <h5 class="card-title">Fifth</h5>
+  <div>
+    <div>
+        <div class="input-group">
+            <button class="btn-info" onclick="carLeave5(sNumm,mydate15)" id="carLeaves5">leave</button>
+            <input id="carInput5" type="text" class="form-control" />
+            <button id="carBtnSave5" onclick="carFunc5(sNumm,mydate15)" class="input-group-addon btn-brown">save</button> 
+        </div>
+        <hr style="width: 100%;text-align:left;margin-left:0">
+        <p id="bb13">free place</p>
+        <p id="bb14">client : </p>
+        
+        <p id="mydate15">start date :</p>
+
+    </div>
+</div>
+</div>
+</div>
+
+</div>
+<!--sixth-->
+<div class="col-lg-4 col-md-6 col-sm-9 col-12" id="cardd6">
+  <div id="car" class="card" style="width: 18rem;">
+  <div class="card-body">
+  <h5 class="card-title">Sixth</h5>
+  <div>
+    <div>
+        <div class="input-group">
+            <button class="btn-info" onclick="carLeave6(sNumm,mydate16)" id="carLeaves6">leave</button>
+            <input id="carInput6" type="text" class="form-control" />
+            <button id="carBtnSave6" onclick="carFunc6(sNumm,mydate16)" class="input-group-addon btn-brown">save</button> 
+        </div>
+        <hr style="width: 100%;text-align:left;margin-left:0">
+        <p id="bb16">free place</p>
+        <p id="bb17">client : </p>
+        
+        <p id="mydate16">start date :</p>
+
+    </div>
+</div>
+</div>
+</div>
+
+</div>
+
+<!--seventh-->
+<div class="col-lg-4 col-md-6 col-sm-9 col-12" id="cardd7">
+  <div id="car" class="card" style="width: 18rem;">
+  <div class="card-body">
+  <h5 class="card-title">Seventh</h5>
+  <div>
+    <div>
+        <div class="input-group">
+            <button class="btn-info" onclick="carLeave7(sNumm,mydate17)" id="carLeaves7">leave</button>
+            <input id="carInput7" type="text" class="form-control" />
+            <button id="carBtnSave7" onclick="carFunc7(sNumm,mydate17)" class="input-group-addon btn-brown">save</button> 
+        </div>
+        <hr style="width: 100%;text-align:left;margin-left:0">
+        <p id="bb19">free place</p>
+        <p id="bb20">client : </p>
+        
+        <p id="mydate17">start date :</p>
+
+    </div>
+</div>
+</div>
+</div>
+
+</div>
+
+<!--eighth-->
+<div class="col-lg-4 col-md-6 col-sm-9 col-12" id="cardd8">
+  <div id="car" class="card" style="width: 18rem;">
+  <div class="card-body">
+  <h5 class="card-title">Eighth</h5>
+  <div>
+    <div>
+        <div class="input-group">
+            <button class="btn-info" onclick="carLeave8(sNumm,mydate18)" id="carLeaves8">leave</button>
+            <input id="carInput8" type="text" class="form-control" />
+            <button id="carBtnSave8" onclick="carFunc8(sNumm,mydate18)" class="input-group-addon btn-brown">save</button> 
+        </div>
+        <hr style="width: 100%;text-align:left;margin-left:0">
+        <p id="bb22">free place</p>
+        <p id="bb23">client : </p>
+        
+        <p id="mydate18">start date :</p>
+
+    </div>
+</div>
+</div>
+</div>
+
+</div>
+
+<!--nineth-->
+<div class="col-lg-4 col-md-6 col-sm-9 col-12" id="cardd9">
+  <div id="car" class="card" style="width: 18rem;">
+  <div class="card-body">
+  <h5 class="card-title">ninth</h5>
+  <div>
+    <div>
+        <div class="input-group">
+            <button class="btn-info" onclick="carLeave9(sNumm,mydate19)" id="carLeaves9">leave</button>
+            <input id="carInput9" type="text" class="form-control" />
+            <button id="carBtnSave9" onclick="carFunc9(sNumm,mydate19)" class="input-group-addon btn-brown">save</button> 
+        </div>
+        <hr style="width: 100%;text-align:left;margin-left:0">
+        <p id="bb25">free place</p>
+        <p id="bb26">client : </p>
+        
+        <p id="mydate19">start date :</p>
+
+    </div>
+</div>
+</div>
+</div>
+
+</div>
+
+<!--tenth-->
+
+<div class="col-lg-4 col-md-6 col-sm-9 col-12" id="cardd10">
+  <div id="car" class="card" style="width: 18rem;">
+  <div class="card-body">
+  <h5 class="card-title">Tenth</h5>
+  <div>
+    <div>
+        <div class="input-group">
+            <button class="btn-info" onclick="carLeave10(sNumm,mydate20)" id="carLeaves10">leave</button>
+            <input id="carInput10" type="text" class="form-control" />
+            <button id="carBtnSave10" onclick="carFunc10(sNumm,mydate20)" class="input-group-addon btn-brown">save</button> 
+        </div>
+        <hr style="width: 100%;text-align:left;margin-left:0">
+        <p id="bb28">free place</p>
+        <p id="bb29">client : </p>
+        
+        <p id="mydate20">start date :</p>
+
+    </div>
+</div>
+</div>
+</div>
+
+</div>
+    </div>
+  </div>
+
+
+
+  <!--first truck-->
+
+  <div class="truckContainer" id="truckContainer" ;">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-sm-9 col-12" id="myCards1">
+        <div id="truck" class="card" style="width: 18rem;">
+        <div class="card-body">
+        <h5 class="card-title">First</h5>
+        <div>
+          <div>
+              <div class="input-group">
+                  <button class="btn-info" onclick="truckLeave1(sNummm,myDate21)" id="truckLeaves1">leave</button>
+                  <input id="truckInput1" type="text" class="form-control" />
+                  <button id="truckButton1" onclick="truckFunc1(sNummm,myDate21)" class="input-group-addon btn-brown">save</button> 
+              </div>
+              <hr style="width: 100%;text-align:left;margin-left:0">
+              <p id="z1">free place</p>
+              <p id="z2">client : </p>
+              <p id="myDate21">start date :</p>
+      
+          </div>
+      </div>
+      </div>
+      </div>
+      
+      </div>
+
+      <!--2-->
+      <div class="col-lg-4 col-md-6 col-sm-9 col-12" id="myCards2">
+        <div id="truck" class="card" style="width: 18rem;">
+        <div class="card-body">
+        <h5 class="card-title">Second</h5>
+        <div>
+          <div>
+              <div class="input-group">
+                  <button class="btn-info" onclick="truckLeave2(sNummm,myDate22)" id="truckLeaves2">leave</button>
+                  <input id="truckInput2" type="text" class="form-control" />
+                  <button id="truckButton2" onclick="truckFunc2(sNummm,myDate22)" class="input-group-addon btn-brown">save</button> 
+              </div>
+              <hr style="width: 100%;text-align:left;margin-left:0">
+              <p id="z4">free place</p>
+              <p id="z5">client : </p>
+              
+              <p id="myDate22">start date :</p>
+
+      
+          </div>
+      </div>
+      </div>
+      </div>
+      
+      </div>
+<!--3-->
+<div class="col-lg-4 col-md-6 col-sm-9 col-12" id="myCards3">
+  <div id="truck" class="card" style="width: 18rem;">
+  <div class="card-body">
+  <h5 class="card-title">Third</h5>
+  <div>
+    <div>
+        <div class="input-group">
+            <button class="btn-info" onclick="truckLeave3(sNummm,myDate23)" id="truckLeaves3">leave</button>
+            <input id="truckInput3" type="text" class="form-control" />
+            <button id="truckButton3" onclick="truckFunc3(sNummm,myDate23)" class="input-group-addon btn-brown">save</button> 
+        </div>
+        <hr style="width: 100%;text-align:left;margin-left:0">
+        <p id="z7">free place</p>
+        <p id="z8">client : </p>
+        
+        <p id="myDate23">start date :</p>
+
+
+    </div>
+</div>
+</div>
+</div>
+
+</div>
+
+<!--4-->
+
+<div class="col-lg-4 col-md-6 col-sm-9 col-12" id="myCards4">
+  <div id="truck" class="card" style="width: 18rem;">
+  <div class="card-body">
+  <h5 class="card-title">Fourth</h5>
+  <div>
+    <div>
+        <div class="input-group">
+            <button class="btn-info" onclick="truckLeave4(sNummm,myDate24)" id="truckLeaves4">leave</button>
+            <input id="truckInput4" type="text" class="form-control" />
+            <button id="truckButton4" onclick="truckFunc4(sNummm,myDate24)" class="input-group-addon btn-brown">save</button> 
+        </div>
+        <hr style="width: 100%;text-align:left;margin-left:0">
+        <p id="z10">free place</p>
+        <p id="z11">client : </p>
+        
+        <p id="myDate24">start date :</p>
+
+
+    </div>
+</div>
+</div>
+</div>
+
+</div>
+
+<!--5-->
+
+<div class="col-lg-4 col-md-6 col-sm-9 col-12" id="myCards5">
+  <div id="truck" class="card" style="width: 18rem;">
+  <div class="card-body">
+  <h5 class="card-title">Fifth</h5>
+  <div>
+    <div>
+        <div class="input-group">
+            <button class="btn-info" onclick="truckLeave5(sNummm,myDate25)" id="truckLeaves5">leave</button>
+            <input id="truckInput5" type="text" class="form-control" />
+            <button id="truckButton5" onclick="truckFunc5(sNummm,myDate25)" class="input-group-addon btn-brown">save</button> 
+        </div>
+        <hr style="width: 100%;text-align:left;margin-left:0">
+        <p id="z13">free place</p>
+        <p id="z14">client : </p>
+        
+        <p id="myDate25">start date :</p>
+
+    </div>
+</div>
+</div>
+</div>
+
+</div>
+
+<!--6-->
+<div class="col-lg-4 col-md-6 col-sm-9 col-12" id="myCards6">
+  <div id="truck" class="card" style="width: 18rem;">
+  <div class="card-body">
+  <h5 class="card-title">Sixth</h5>
+  <div>
+    <div>
+        <div class="input-group">
+            <button class="btn-info" onclick="truckLeave6(sNummm,myDate26)" id="truckLeaves6">leave</button>
+            <input id="truckInput6" type="text" class="form-control" />
+            <button id="truckButton6" onclick="truckFunc6(sNummm,myDate26)" class="input-group-addon btn-brown">save</button> 
+        </div>
+        <hr style="width: 100%;text-align:left;margin-left:0">
+        <p id="z16">free place</p>
+        <p id="z17">client : </p>
+        
+        <p id="myDate26">start date :</p>
+
+    </div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+<!--7-->
+
+<div class="col-lg-4 col-md-6 col-sm-9 col-12" id="myCards7">
+  <div id="truck" class="card" style="width: 18rem;">
+  <div class="card-body">
+  <h5 class="card-title">Seventh</h5>
+  <div>
+    <div>
+        <div class="input-group">
+            <button class="btn-info" onclick="truckLeave7(sNummm,myDate27)" id="truckLeaves7">leave</button>
+            <input id="truckInput7" type="text" class="form-control" />
+            <button id="truckButton7" onclick="truckFunc7(sNummm,myDate27)" class="input-group-addon btn-brown">save</button> 
+        </div>
+        <hr style="width: 100%;text-align:left;margin-left:0">
+        <p id="z19">free place</p>
+        <p id="z20">client : </p>
+        
+        <p id="myDate27">start date :</p>
+
+    </div>
+</div>
+</div>
+</div>
+
+</div>
+
+<!--8-->
+<div class="col-lg-4 col-md-6 col-sm-9 col-12" id="myCards8">
+  <div id="truck" class="card" style="width: 18rem;">
+  <div class="card-body">
+  <h5 class="card-title">Eighth</h5>
+  <div>
+    <div>
+        <div class="input-group">
+            <button class="btn-info" onclick="truckLeave8(sNummm,myDate28)" id="truckLeaves8">leave</button>
+            <input id="truckInput8" type="text" class="form-control" />
+            <button id="truckButton8" onclick="truckFunc8(sNummm,myDate28)" class="input-group-addon btn-brown">save</button> 
+        </div>
+        <hr style="width: 100%;text-align:left;margin-left:0">
+        <p id="z22">free place</p>
+        <p id="z23">client : </p>
+        
+        <p id="myDate28">start date :</p>
+
+
+    </div>
+</div>
+</div>
+</div>
+
+</div>
+
+<!--9-->
+
+<div class="col-lg-4 col-md-6 col-sm-9 col-12" id="myCards9">
+  <div id="truck" class="card" style="width: 18rem;">
+  <div class="card-body">
+  <h5 class="card-title">Ninth</h5>
+  <div>
+    <div>
+        <div class="input-group">
+            <button class="btn-info" onclick="truckLeave9(sNummm,myDate29)" id="truckLeaves9">leave</button>
+            <input id="truckInput9" type="text" class="form-control" />
+            <button id="truckButton9" onclick="truckFunc9(sNummm,myDate29)" class="input-group-addon btn-brown">save</button> 
+        </div>
+        <hr style="width: 100%;text-align:left;margin-left:0">
+        <p id="z25">free place</p>
+        <p id="z26">client : </p>
+        
+        <p id="myDate29">start date :</p>
+
+        
+
+    </div>
+</div>
+</div>
+</div>
+
+</div>
+
+<!--10-->
+
+<div class="col-lg-4 col-md-6 col-sm-9 col-12" id="myCards10">
+  <div id="truck" class="card" style="width: 18rem;">
+  <div class="card-body">
+  <h5 class="card-title">Tenth</h5>
+  <div>
+    <div>
+        <div class="input-group">
+            <button class="btn-info" onclick="truckLeave10(sNummm,myDate30)" id="truckLeaves10">leave</button>
+            <input id="truckInput10" type="text" class="form-control" />
+            <button id="truckButton10" onclick="truckFunc10(sNummm,myDate30)" class="input-group-addon btn-brown">save</button> 
+        </div>
+        <hr style="width: 100%;text-align:left;margin-left:0">
+        <p id="z28">free place</p>
+        <p id="z29">client : </p>
+        
+        <p id="myDate30">start date :</p>
+
+
+    </div>
+</div>
+</div>
+</div>
+
+</div>
+
+    </div>
+  </div>
+
+  <div class="myTicket">
+    <div class="row">
+      <div class="col-lg-3 col-md-2 col-sm-2 col-1 offset-4" id="myTicket">
+        <p id="theTikcet">your Ticket</p>
+        <p id="wel">Hello : </p>
+        <label id="timee">Duration :</label>
+        <p id="cost">price : </p>
+        
+      </div>
+    </div>
+  </div>
+  <div class="printer">
+    <div class="row">
+       <button  id="printBtn" class="col-lg-4 col-md-6 col-sm-6 col-6 btn-info offset-4 ">
+        <a href="javascript:window.print();">Print</a>
+       </button>
+     
+    </div>
+  </div>
+    <script src="park.js"></script>
+</body>
+</html>

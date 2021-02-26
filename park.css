@@ -1,0 +1,246 @@
+.LL{
+    overflow-x: hidden;
+}
+#aa{
+    font-weight: bold;
+    font-size: 25px;
+}
+#ab,#ac,#ad,#searchBtn{
+    width: 180px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-right: 8px;
+    margin-top: 5px ;
+    border: 1px solid #ccc;
+
+}
+#ae{
+width: 180px;
+height: 40px;
+margin-top: 5px;
+border-radius: 10px;
+border: 1px solid rgb(41, 121, 175);
+margin-right: 10px;
+margin-top: 10px;
+
+}
+.mct{
+    font-weight: bold;
+    font-size: 20px;
+    margin: 10px 0px 10px 0px;
+}
+.myimg{
+    width: 450px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.pnum{
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+}
+#Numm{
+    color: red;
+}
+
+.card-title{
+    text-align: center;
+    font-weight: bold;
+}
+#mycard{
+    width: 350px;
+    height: 350px;
+    margin-bottom: 30px;
+    border: 1px solid #f00;
+    border-radius: 20px;
+    background-color: rgb(245, 245, 233 );
+   
+    
+}
+
+#car{
+    width: 350px;
+    height: 350px;
+    margin-bottom: 30px;
+    border: 1px solid #f00;
+    border-radius: 20px;
+    background-color: rgb(240, 240, 215)
+}
+
+#truck{
+    width: 350px;
+    height: 350px;
+    margin-bottom: 30px;
+    border: 1px solid #f00;
+    border-radius: 20px;
+    background-color: rgb(235, 235, 200)
+}
+
+
+
+
+#myInput1{
+height: 30px;
+width: 180px;
+margin-bottom: 20px;
+}
+
+#myFirstInput{
+    margin-right: 10px;
+}
+#myFirstBtn,#mySecondBtn,#myThirdtBtn,#myFourthtBtn,#myFifthBtn,#mySixthBtn,#mySeventhBtn,#myEighthBtn,#myNinethBtn,#myTenthBtn,#carBtnSave1,#carBtnSave2,#carBtnSave3,#carBtnSave4,#carBtnSave5,#carBtnSave6,#carBtnSave7,#carBtnSave8,#carBtnSave9,#carBtnSave10,#truckButton1,#truckButton2,#truckButton3,#truckButton4,#truckButton5,#truckButton6,#truckButton7,#truckButton8,#truckButton9,#truckButton10{
+    border-radius: 10px;
+    font-weight: bold;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+}
+
+#myP1,#myP2,#mydate1 ,#m1,#m2,#mydate2,#p1,#p2,#mydate3,#q1,#q2,#mydate4,#r1,#r2,#mydate5,#s1,#s2,#mydate6,#t1,#t2,#mydate7,#u1,#u2,#mydate8,#v1,#v2,#mydate9,#w1,#w2,#mydate10,#bb1,#bb2,#mydate11,#bb4,#bb5,#mydate12,#bb7,#bb8,#mydate13,#bb10,#bb11,#mydate14,#bb13,#bb14,#mydate15,#bb16,#bb17,#mydate16,#bb19,#bb20,#mydate17,#bb22,#bb23,#mydate18,#bb25,#bb26,#mydate19,#bb28,#bb29,#mydate20,#z1,#z2,#myDate21,#z4,#z5,#myDate22,#z7,#z8,#myDate23,#z10,#z11,#myDate24,#z13,#z14,#myDate25,#z16,#z17,#myDate26,#z19,#z20,#myDate27,#z22,#z23,#myDate28,#z25,#z26,#myDate29,#z28,#z29,#myDate30{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#myTicket{
+    width: 420px;
+    height: 200px;
+    border: 1px solid #f00;
+    margin-bottom: 10px;
+    background-color: azure;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 20px;
+
+}
+
+
+#wel,#timee,#cost{
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+#printBtn{
+    height: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+#myFirstInput,#mySecondInput,#myThirdInput,#myFourthInput,#myFifthInput,#mySixthInput,#mySeventhInput,#myEighthInput,#myNinethInput,#myTenthInput,#carInput1,#carInput2,#carInput3,#carInput4,#carInput5,#carInput6,#carInput7,#carInput8,#carInput9,#carInput10,#truckInput1,#truckInput2,#truckInput3,#truckInput4,#truckInput5,#truckInput6,#truckInput7,#truckInput8,#truckInput9,#truckInput10{
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.active{
+
+    background-color: red;
+}
+
+#myNum{
+    color: red;
+}
+
+#leav,#leav1,#leav2,#leav3,#leav4,#leav5,#leav6,#leav7,#leav8,#leav9,#carLeaves1,#carLeaves2,#carLeaves3,#carLeaves4,#carLeaves5,#carLeaves6,#carLeaves7,#carLeaves8,#carLeaves9,#carLeaves10,#truckLeaves1,#truckLeaves2,#truckLeaves3,#truckLeaves4,#truckLeaves5,#truckLeaves6,#truckLeaves7,#truckLeaves8,#truckLeaves9,#truckLeaves10{
+    text-align: center;
+    width: 100%;
+    background-color:rgb(114, 113, 110);
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    border: 1px solid#ccc;
+    height: 50px;
+}
+
+#checkDiv{
+    width: 250px;
+    height: 200px;
+    background-color: rgb(236, 235, 235);
+    border-radius: 10px;
+}
+
+#checkBtn{
+    width: 110%;
+    color: rgb(236, 227, 227);
+    height: 40px;
+    border-radius: 10px;
+    margin-left: -11px;
+    border: 1px solid #ccc;
+}
+
+
+@media screen and (max-width: 900px) {
+    #ab,#ac,#ad {
+      width: 100%;
+    }
+  }
+
+ 
+
+  @media only screen and (max-width: 600px) {
+    #myTicket {
+       width: 300px;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .container {
+        text-align: center;
+    }
+  }
+
+
+  .card{
+      margin: 0 auto;
+  }
+  
+
+  @media only screen and (max-width: 600px) {
+    #canvas {
+       margin: 0 auto;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    #myTicket {
+       margin: 0 auto;
+       margin-bottom: 10px;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    #printBtn {
+       margin: 0 auto;
+       margin-bottom: 10px;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    #aa {
+       margin: 0 auto;
+      
+    }
+  }
+  
+  
+  @media only screen and (max-width: 768px) {
+    #myTicket {
+       margin: 0 auto;
+       margin-bottom: 10px;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    #printBtn {
+       margin: 0 auto;
+       margin-bottom: 10px;
+    }
+  }
+
+ 
+
+
